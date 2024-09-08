@@ -17,21 +17,23 @@ const App = () => {
         <input
           type="text"
           placeholder="Tatez le nom d'un aliment (en Anglais)"
-          className="input bg-gray-800 border-accent focus:border-accent border mx-auto block my-5"
+          className="input w-96 text-center bg-gray-800 border-accent focus:border-accent border mx-auto block my-5"
         />
       </header>
       <main>
-        <ul className="flex flex-wrap">
+        <ul className="mx-4 flex flex-wrap">
           {data.map((cook) => (
-            <Card className=" m-2 p-8 bg-blue-800" key={cook.idMeal}>
-              <h1>{cook.strMeal}</h1>
-              <p className="p-2">Origin : {cook.strArea} </p>
+            <Card key={cook.idMeal}>
+              <h2 className="text-center m-2 text-xl font-bold">
+                {cook.strMeal}
+              </h2>
+              <p className="text-center p-2">Origin : {cook.strArea} </p>
               <img
-                className="m-2 w-20 h-20"
+                className=" rounded-md w-[100%]"
                 src={cook.strMealThumb}
                 alt={`image ${cook.strMeal}`}
               />
-              {/* <p>{cook.strInstructions} </p> */}
+              <p className="line-clamp-6 p-4">{cook.strInstructions} </p>
             </Card>
           ))}
         </ul>
