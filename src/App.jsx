@@ -23,18 +23,7 @@ const App = () => {
       <main>
         <ul className="mx-4 flex flex-wrap">
           {data.map((cook) => (
-            <Card key={cook.idMeal}>
-              <h2 className="text-center m-2 text-xl font-bold">
-                {cook.strMeal}
-              </h2>
-              <p className="text-center p-2">Origin : {cook.strArea} </p>
-              <img
-                className=" rounded-md w-[100%]"
-                src={cook.strMealThumb}
-                alt={`image ${cook.strMeal}`}
-              />
-              <p className="line-clamp-6 p-4">{cook.strInstructions} </p>
-            </Card>
+            <Card key={cook.idMeal} cook={cook}></Card>
           ))}
         </ul>
       </main>
