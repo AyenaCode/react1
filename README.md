@@ -1,8 +1,13 @@
-# React + Vite
+# React project 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+API source : www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
 
-Currently, two official plugins are available:
+## Roadmap m
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1- Tester l'API
+
+2- chercher les donner avec Axios
+
+3- Stocker ses donner dans le sate (useState)
+
+Bonus : Rechercher ce qui est tapé dans l'input (www.themealdb.com/api/json/v1/1/search.php?s= + serchValue)
