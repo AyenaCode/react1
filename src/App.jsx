@@ -17,7 +17,7 @@ const App = () => {
         <h1 className="text-center text-green-400 m-8">React Cook</h1>
         <input
           type="text"
-          placeholder="Tatez le nom d'un aliment (en Anglais)"
+          placeholder="Tapez le nom d'un aliment (en Anglais)"
           className="input w-96 text-center bg-gray-800 border-accent focus:border-accent border mx-auto block my-5"
           onChange={(e) => setSerchValue(e.target.value)}
         />
