@@ -6,7 +6,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
+      .get("https://www.themealdb.com/api/json/v1/1/search.php?s=")
       .then((res) => setData(res.data.meals));
   }, []);
   return (
@@ -19,7 +19,15 @@ const App = () => {
           className="input bg-gray-800 border-accent focus:border-accent border mx-auto block my-5"
         />
       </header>
-      <main></main>
+      <main>
+        <ul className="flex flex-wrap ">
+          {data.map((cook) => (
+            <li className="card m-2 p-8 bg-blue-800" key={cook.idMeal}>
+              {cook.strMeal}
+            </li>
+          ))}
+        </ul>
+      </main>
     </div>
   );
 };
