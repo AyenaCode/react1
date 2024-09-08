@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Card } from "./Card";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -20,11 +21,18 @@ const App = () => {
         />
       </header>
       <main>
-        <ul className="flex flex-wrap ">
+        <ul className="flex flex-wrap">
           {data.map((cook) => (
-            <li className="card m-2 p-8 bg-blue-800" key={cook.idMeal}>
-              {cook.strMeal}
-            </li>
+            <Card className=" m-2 p-8 bg-blue-800" key={cook.idMeal}>
+              <h1>{cook.strMeal}</h1>
+              <p className="p-2">Origin : {cook.strArea} </p>
+              <img
+                className="m-2 w-20 h-20"
+                src={cook.strMealThumb}
+                alt={`image ${cook.strMeal}`}
+              />
+              {/* <p>{cook.strInstructions} </p> */}
+            </Card>
           ))}
         </ul>
       </main>
